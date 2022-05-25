@@ -11,6 +11,10 @@ h1{
   font-size: 1.75em;
 }
 
+h2{
+  font-size: 1.5em;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -28,6 +32,18 @@ a:hover{
   /* cursor: crosshair; */
 }
 
+img {
+  transition: 200ms ease-in-out;
+}
+
+img.zoom:hover{
+  transform: scale(1.5)
+}
+
+img.click:hover{
+  transform: scale(1.1)
+}
+
 .filler{
   margin: auto 100px;
   width: 300px;
@@ -43,25 +59,25 @@ a:hover{
 }
 
 .link{
-  margin: auto 50px;
-  width: auto;
-  height: auto;
+  margin: auto 1em;
   float: left;
 }
 
 .header{
   width: 100%;
-  height: 125px;
+  height: 100px;
   /* height: px; */
   /* padding: 60px; */
   /* height: auto; */
   /* padding: 5% 20%; */
   /* margin: 25px auto; */
   margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  padding: 10px;
   /* text-align: center; */
-  /* background-color: gray; */
+  /*background-color: gray; /**/
 }
+
 #container{
   text-align: center;
   width: 100%;
@@ -69,13 +85,41 @@ a:hover{
   padding: auto auto;
 }
 
-.homepage{
-  width: 100vw;
-  /* background-color: none; */
-  padding: 50vh 0;
-  background-image: url(img/homepage.png);
-  background-size: 100%;
-  float: left;
-  /* background-position: 0 -200px; */
-  /* text-transform: lowercase; */
+.card {
+    width: 130px;
+    height: 195px;
+    position: relative;
+    display: inline-block;
+}
+.card .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.card:hover .img-top {
+    display: inline;
+}
+
+@media only screen and (max-width: 1440px){
+  .header{height: 125px;}
+  .link{font-size: 1.1em;}
+}
+
+@media only screen and (max-width: 1024px){
+  .header{height: 100px;}
+  .link{font-size: 0.85em;}
+}
+
+@media only screen and (max-width: 768px){
+  .header{height: 125px;}
+  .link{font-size: 0.75em;}
+  h2{font-size: 1.25em;}
+}
+
+@media only screen and (max-width: 340px){
+  .header{height: 125px;}
+  .link{font-size: 0.65em;}
+  h2{font-size: 1.15em;}
 }
